@@ -6,7 +6,7 @@ const packageController = require('../controllers/packageController'); // Import
 const { loginAdmin } = require('../controllers/adminController');
 
 // Admin login route (no authentication required for login)
-router.post('/login', loginAdmin);
+router.post('/', loginAdmin);
 
 // Protect the following routes with the authentication middleware
 router.use(authenticateAdmin);
