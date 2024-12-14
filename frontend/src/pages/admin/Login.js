@@ -12,7 +12,7 @@ const AdminLogin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/admin/login', { username, password });
+      const response = await axios.post('https://tour-booking-system-l4b4.onrender.com/api/admin/login', { username, password });
       if (response.status === 200) {
         // Redirect to Admin Dashboard if login is successful
         navigate('/admin/dashboard'); // Use navigate instead of history.push

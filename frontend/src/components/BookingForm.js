@@ -18,7 +18,7 @@ const BookingForm = () => {
   // Fetch package details based on packageId
   useEffect(() => {
     if (packageId) {
-      axios.get(`http://localhost:5000/api/packages/${packageId}`)
+      axios.get(`https://tour-booking-system-l4b4.onrender.com/api/packages/${packageId}`)
         .then(response => {
           setPackageDetails(response.data); // Store package details
         })
@@ -43,7 +43,7 @@ const BookingForm = () => {
       packageId,
     };
 
-    axios.post('http://localhost:5000/api/bookings', bookingDetails)
+    axios.post('https://tour-booking-system-l4b4.onrender.com/api/bookings', bookingDetails)
       .then(response => {
         alert('Booking successful!');
         generateInvoice(formData, packageDetails);  

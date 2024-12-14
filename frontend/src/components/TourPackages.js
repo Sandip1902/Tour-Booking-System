@@ -9,7 +9,7 @@ const TourPackages = () => {
 
   useEffect(() => {
     // Fetch tour packages from the backend
-    axios.get('http://localhost:5000/api/packages')
+    axios.get('https://tour-booking-system-l4b4.onrender.com/api/packages')
       .then(response => {
         setPackages(response.data);
       })

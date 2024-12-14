@@ -18,10 +18,10 @@ const AdminDashboard = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const packagesResponse = await axios.get('http://localhost:5000/api/packages');
+        const packagesResponse = await axios.get('https://tour-booking-system-l4b4.onrender.com/api/packages');
         setPackages(packagesResponse.data);
   
-        const bookingsResponse = await axios.get('http://localhost:5000/api/bookings');
+        const bookingsResponse = await axios.get('https://tour-booking-system-l4b4.onrender.com/api/bookings');
         
         // Extract bookings data from the response
         if (Array.isArray(bookingsResponse.data.data)) {
@@ -58,7 +58,7 @@ const AdminDashboard = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/packages', newPackage);
+      const response = await axios.post('https://tour-booking-system-l4b4.onrender.com/api/packages', newPackage);
       setPackages((prevPackages) => [...prevPackages, response.data]);  // Add the new package to the list
       setNewPackage({ title: '', description: '', price: '', availableDates: '', image: '' }); // Reset form
       setSuccess('Package added successfully!');
@@ -71,7 +71,7 @@ const AdminDashboard = () => {
   // Handle deleting a package
   const handleDeletePackage = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/packages/${id}`);
+      await axios.delete(`https://tour-booking-system-l4b4.onrender.com/api/packages/${id}`);
       setPackages(packages.filter((pkg) => pkg._id !== id));  // Remove the deleted package from the list
       setSuccess('Package deleted successfully!');
     } catch (error) {

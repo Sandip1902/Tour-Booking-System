@@ -1,7 +1,7 @@
 // src/services/api.js
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api';  // Adjust to your backend URL
+const API_URL = 'https://tour-booking-system-l4b4.onrender.com/api';   
 
 // Get all tour packages
 export const getPackages = async () => {
