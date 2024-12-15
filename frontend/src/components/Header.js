@@ -33,13 +33,13 @@ const Header = () => {
           {/* Call to Action */}
           <div className="hidden md:flex space-x-4">
             <Link
-              to="/login"
+              to="/admin"
               className="px-6 py-2 bg-secondary text-white font-medium rounded-lg hover:bg-primary transition duration-300"
             >
               Login
             </Link>
             <Link
-              to="/signup"
+              to="/admin"
               className="px-6 py-2 bg-transparent border-2 border-white text-white font-medium rounded-lg hover:bg-white hover:text-primary transition duration-300"
             >
               Sign Up
